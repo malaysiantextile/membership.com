@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>JavaScript CURD</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <header>
+
+            <div class="filterEntries">
+                <div class="entries">
+                    Show <select name="" id="table_size">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entries
+                </div>
+
+                <div class="filter">
+                    <label for="search">Search:</label>
+                    <input type="search" name="" id="search" placeholder="Enter company name/products">
+                </div>
+            </div>
+
+            <div class="addMemberBtn">
+                <button>New member</button>
+            </div>
+
+        </header>
+
+
+        <table>
+
+            <thead>
+                <tr class="heading">
+                    <th>No</th>
+                    <th>Picture</th>
+                    <th>Company Name</th>
+                    <th>Address</No></th>
+                    <th>PIC</th>
+                    <th>Business Nature</th>
+                    <th>Website</th>
+                    <th>Products</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+
+            <tbody class="userInfo">
+                <!---- <tr><td class="empty" colspan="11" align="center">No data available in table</td></tr> -->
+                 <!---- <tr>
+                    <td>1</td>
+                    <td><img src="./img/pic1.png" alt="" width="40" height="40"></td>
+                    <td>South Island Garment</td>
+                    <td>1000</td>
+                    <td>Pulau Pinang</td>
+                    <td>USA,China</td>
+                    <td>https://sig.com.my/</td>
+                    <td>Sportwear, Outerwear</td>
+                    <td>info@sig.com.my</td>
+                    <td>043907827</td>
+                    <td>
+                        <button><i class="fa-regular fa-eye"></i></button>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="./img/pic2.png" alt="" width="40" height="40"></td>
+                    <td>Embroitex (M) Sdn Bhd</td>
+                    <td>31</td>
+                    <td>Semenyih,Selangor</td>
+                    <td>10% Export & 90% Domestic</td>
+                    <td>https://embroitexjaya.com/</td>
+                    <td>Embroidery</td>
+                    <td>kctan@stitichart.com.my</td>
+                    <td>0387239689</td>
+                    <td>
+                        <button><i class="fa-regular fa-eye"></i></button>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="./img/pic3.png" alt="" width="40" height="40"></td>
+                    <td>Lippotex Industries Sdn Bhd</td>
+                    <td>150</td>
+                    <td>Pulau Pinang</td>
+                    <td>Singapore,New Zealand</td>
+                    <td>https://lippotex.com/index.html</td>
+                    <td>Work-wear Uniforms Manufacturing</td>
+                    <td>alicetan@lippotex.com</td>
+                    <td>045541007</td>
+                    <td>
+                        <button><i class="fa-regular fa-eye"></i></button>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="./img/pic4.png" alt="" width="40" height="40"></td>
+                    <td>Classita (M) Sdn Bhd </td>
+                    <td>720</td>
+                    <td>Teluk Intan,Perak</td>
+                    <td>USA, Canada</td>
+                    <td>www.classita.com.my</td>
+                    <td>Bras, panties,boxers...</td>
+                    <td>info@classita.com.my</td>
+                    <td>056218888</td>
+                    <td>
+                        <button><i class="fa-regular fa-eye"></i></button>
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </td>
+                </tr> -->
+            </tbody>
+
+        </table>
+
+
+        <footer>
+            <span class="showEntries">Showing 1 to 10 of 50 entries</span>
+            <div class="pagination">
+                <button>Prev</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>Next</button> 
+            </div>
+            <p>Copyright 2024 by MTMA. All Right Reserved</p>
+
+        </footer>
+    </div> 
+
+
+    <!--Popup Form-->
+
+    <div class="dark_bg">
+
+        <div class="popup">
+             <header>
+                <h2 class="modalTitle">Fill the Form</h2>
+                <button class="closeBtn">&times;</button>
+             </header>
+
+             <div class="body">
+                <form action="#" id="myForm">
+                    <div class="imgholder">
+                        <label for="uploadimg" class="upload">
+                            <input type="file" name="" id="uploadimg" class="picture">
+                            <i class="fa-solid fa-plus"></i>
+                        </label>
+                        <img src="./img/pic1.png" alt="" width="150" height="150" class="img">
+                    </div>
+
+                    <div class="inputFieldContainer">
+
+                        <div class="nameField">
+                            <div class="form_control">
+                                <label for="fName">First Name:</label>
+                                <input type="text" name="" id="fName" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="lName">Last Name:</label>
+                                <input type="text" name="" id="lName" required>
+                            </div>
+                        </div>
+
+                        <div class="noEmployeeField">
+                            <div class="form_control">
+                                <label for="address">Address:</label>
+                                <input type="text" name="" id="address" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="picc">PIC:</label>
+                                <input type="text" name="" id="picc" required>
+                            </div>
+                        </div>
+
+                        <div class="businessNature">
+                            <div class="form_control">
+                                <label for="bNature">Business Nature:</label>
+                                <input type="text" name="" id="bNature" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="website">Website:</label>
+                                <input type="url" name="" id="website" required>
+                            </div>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="products">Products:</label>
+                            <input type="text" name="" id="products" required>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="email">Email:</label>
+                            <input type="email" name="" id="email" required>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="phone">Phone:</label>
+                            <input type="number" name="" id="phone" required>
+                        </div>
+                    </div>
+                </form>
+             </div>
+
+             <footer class="popupFooter">
+                <button form="myForm" class="submitBtn">Submit</button>
+             </footer>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
